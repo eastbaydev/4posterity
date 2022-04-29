@@ -1,0 +1,33 @@
+{
+  "name": "@eastbaydev/4posterity",
+  "description": "A website that gives a brief history of East Bay Development.",
+  "license": "GPL-3.0",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eastbaydev/4posterity"
+  },
+  "bugs": {
+    "email": "mike@lando.dev",
+    "url": "https://github.com/eastbaydev/4posterity/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "build": "vuepress build .",
+    "dev": "vuepress dev . --clean-cache --clean-temp",
+    "lint": "eslint --quiet --ext .js,.vue --config .eslintrc.json .vuepress components",
+    "release": "bump --prompt --tag --all --push"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.16.0",
+    "@lando/vuepress-theme-default-plus": "1.0.0-beta.30",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-vue": "^8.0.3",
+    "version-bump-prompt": "^4.2.1",
+    "vuepress": "2.0.0-beta.35"
+  }
+}

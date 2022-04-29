@@ -1,0 +1,22 @@
+name: eastbaywebshop
+services:
+  node:
+    type: node:14
+    build:
+      - yarn install
+    scanner: false
+    ssl: false
+    sslExpose: false
+    overrides:
+      ports:
+        - 8072:8072
+tooling:
+  node:
+    service: node
+  yarn:
+    service: node
+  dev:
+    service: node
+    cmd: yarn dev --port 8072
+    env:
+      DEBUG: "@lando/*"

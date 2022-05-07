@@ -1,4 +1,5 @@
 const {path} = require('@vuepress/utils');
+const customTheme = require('@lando/vuepress-theme-default-plus');
 
 module.exports = {
   lang: 'en-US',
@@ -10,8 +11,7 @@ module.exports = {
     ['link', {rel: 'icon', href: '/favicon.ico', size: 'any'}],
     ['link', {rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml'}],
   ],
-  theme: '@lando/vuepress-theme-default-plus',
-  themeConfig: {
+  theme: customTheme({
     alias: {
       '@theme/Home.vue': path.resolve(__dirname, '..', 'components', 'Home.vue'),
     },
@@ -23,5 +23,5 @@ module.exports = {
     versionsPage: false,
     contributorsPage: false,
     sidebar: [],
-  },
+  }),
 };
